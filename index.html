@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/icofont/icofont.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Загрузочное окно -->
+        <article class="load">
+            <button id="min">Маленький объём данных</button>
+            <button id="max">Большой объём данных</button>
+            <!-- Спираль загрузки -->
+            <div id="loading">
+                <span>&#xeffa;</span>
+            </div>
+        </article>
+        <!-- Таблица, кнопки, форма добавления строки и поле поиска и номера страниц -->
+        <article>
+            <button id="add-row">Добавить</button>
+            <section class="add-new-row">
+                <button id="closemodal">&#xec4f;</button>
+                <form action="">
+                    <label for="id"> id
+                        <input type="text" name="id" id="id">
+                    </label>
+
+                    <label for="firstName">firstName
+                        <input type="text" name="firstName" id="firstName">
+                    </label>
+
+                    <label for="lastName">lastName
+                        <input type="text" name="lastName" id="lastName">
+                    </label>
+
+                    <label for="email">email
+                        <input type="text" name="email" id="email">
+                    </label>
+
+                    <label for="phone">phone
+                        <input type="text" name="phone" id="phone">
+                    </label>
+
+                    <input type="submit" value="Добавить в таблицу" disabled>
+                </form>
+            </section>
+
+            <section class="data-table">
+                <!-- Кпопка прокрутки страниц -->
+                <button id="prew">&#xea68;</button>
+                <!-- Таблица -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="down" data-param="id" title="Sort by id">id</th>
+                            <th class="down" data-param="firstName" title="Sort by firstname">firstname</th>
+                            <th class="down" data-param="lastName" title="Sort by lastname">lastname</th>
+                            <th class="down" data-param="email" title="Sort by Email">Email</th>
+                            <th class="down" data-param="phone" title="Sort by phone">phone</th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <!-- Выбранная строка -->
+                <div class="selected none">
+                    <div class="description">
+                        <p>Выбран пользователь: <span></span></p>
+                        <label for="description">Описание:</label>
+                        <textarea name="" id="description" cols="30" rows="10"></textarea>
+                        <p>Адрес проживания: <span></span></p>
+                        <p>Город: <span></span></p>
+                        <p>Провинция: <span></span></p>
+                        <p>Индекс: <span></span></p>
+                    </div>
+                </div>
+                <!-- Кпопка прокрутки страниц -->
+                <button id="next">&#xea69;</button>
+            </section>
+
+            <!-- Фиксированное поле с поиском и номерами страниц -->
+            <section class="search-and-pages">
+                <!-- Поиск -->
+                <div class="search">
+                    <form action="" id="search-form">
+                        <input type="text" name="search" id="search-inp" placeholder="Search">
+                        <input type="submit" id="search-button" value="&#xed11;">
+                    </form>
+                </div>
+
+                <!-- Список с номерами страниц -->
+                <div class="page-numbers">
+                    <nav>
+                        <ul></ul>
+                    </nav>
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Образцы для копирования -->
+    <template>
+        <!-- Для вывода в таблице -->
+        <!-- Тело таблицы -->
+        <tbody></tbody>
+        <!-- Строка -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
